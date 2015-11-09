@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.michael.spark.MainActivity">
+
+    <item android:id="@+id/search_course"
+        android:title="Search"
+        android:orderInCategory="100"
+        android:icon="@mipmap/ic_action_search"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/new_comment_toolbar"
+        android:title="Add New Comment"
+        android:orderInCategory="200"
+        android:icon="@mipmap/ic_action_new"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_logout"
+        android:title="@string/action_logout"
+        android:orderInCategory="300"
+        app:showAsAction="withText|ifRoom" />
+
+    <item android:id="@+id/action_settings"
+    android:title="@string/action_settings"
+    android:orderInCategory="300"
+    app:showAsAction="never" />
+
+</menu>

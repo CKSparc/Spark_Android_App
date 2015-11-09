@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profilePic"
+        android:src="@mipmap/avatar_empty"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/usernameField"
+        android:paddingLeft="20dp"
+        android:layout_alignTop="@+id/profilePic"
+        android:layout_toRightOf="@+id/profilePic"
+        android:layout_toEndOf="@+id/profilePic"
+        android:textSize="24sp"
+        android:textColor="@android:color/tertiary_text_light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailField"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/usernameField"
+        android:layout_toRightOf="@+id/profilePic"
+        android:layout_toEndOf="@+id/profilePic"
+        android:textSize="16sp"
+        android:textColor="@android:color/tertiary_text_light"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profilePic"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="16dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/posts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp">
+            <!-- Posts -->
+            <TextView
+                android:id="@+id/postNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10k"
+                android:textSize="16sp"
+                android:textColor="@android:color/background_dark"/>
+
+            <TextView
+                android:id="@+id/numberOfPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posts"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/tertiary_text_light"/>
+            <!-- Level -->
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/progress"
+                android:layout_alignStart="@+id/progress"
+                android:paddingTop="1dp"
+                android:paddingLeft="20dp"
+                android:progress="100"/>
+
+            <TextView
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/tertiary_text_light"/>
+            <!-- Rating -->
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:layout_alignParentBottom="true"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_alignLeft="@+id/profilePic"
+                android:layout_alignStart="@+id/profilePic"
+                android:paddingLeft="20dp"
+                android:rating="4"/>
+
+            <TextView
+                android:id="@+id/ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/tertiary_text_light"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <GridView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/friendsGrid"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:numColumns="auto_fit"
+        android:columnWidth="90dp"
+        android:stretchMode="columnWidth"
+        android:horizontalSpacing="@dimen/user_grid_spacing"
+        android:verticalSpacing="@dimen/user_grid_spacing"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editTextLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Friends:"
+        android:id="@+id/textView2"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:layout_below="@+id/editTextLayout"
+        android:layout_alignRight="@+id/profilePic"
+        android:layout_alignEnd="@+id/profilePic" />
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_below="@+id/textView2"
+        android:text="@string/empty_friends_label"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:fillViewport="false">
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@mipmap/ic_action_edit"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            fab:fab_type="normal"
+            fab:fab_shadow="true"
+            fab:fab_colorNormal="@color/toolbar"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            android:elevation="4dp"/>
+    </ScrollView>
+
+</RelativeLayout>

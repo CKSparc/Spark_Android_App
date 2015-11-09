@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toolbar">#e51c23</color>
+    <color name="material_red_toolbar">#d01716</color>
+    <color name="colorPrimaryDark">#d01716</color>
+
+    <color name="light_gray">#EEEEEE</color>
+    <color name="text_color">#CF000F</color>
+
+    <color name="light_red_button">#e84e40</color>
+    <color name="pressed_red_button">#F22613</color>
+    <color name="focused_red_button">#CF000F</color>
+
+    <color name="color_gold">#FFEB3B</color>
+    <color name="drawer_text_color">#FF757575</color>
+</resources>

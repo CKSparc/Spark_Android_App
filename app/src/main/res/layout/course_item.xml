@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+        <RelativeLayout
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inbox_horizontal_margin"
+            android:layout_marginRight="@dimen/inbox_horizontal_margin"
+            android:layout_marginTop="@dimen/inbox_vertical_margin"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/senderLabel"
+                android:text="Test Name"
+                android:textColor="@color/drawer_text_color"
+                android:paddingTop="8dp"
+                android:paddingLeft="8dp"
+                android:textSize="13sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test"
+                android:textColor="@color/primary_dark_material_dark"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:id="@+id/contDesc"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+</LinearLayout>

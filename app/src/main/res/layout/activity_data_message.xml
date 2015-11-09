@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.michael.spark.DataMessage"
+    android:background="@color/light_gray">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar"
+        android:elevation="4dp">
+
+        <!-- widgets -->
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        style="@style/AuthFieldContainer"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="80dp">
+
+        <EditText
+            android:id="@+id/messageField"
+            android:hint="Edit Caption "
+            style="@style/AuthEditText">
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="140"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/charCount" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/post_button"
+        android:text="Send"
+        android:layout_below="@+id/editTextLayout"
+        android:layout_alignParentLeft="true"
+        style="@style/AuthButton" />
+</RelativeLayout>

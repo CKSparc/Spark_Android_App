@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar"
+        android:elevation="4dp">
+
+        <!-- widgets -->
+
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="489dp"
+        android:id="@android:id/list"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"
+        android:layout_gravity="center_horizontal|bottom" />
+
+</FrameLayout>
